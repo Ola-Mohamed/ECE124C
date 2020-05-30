@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="shortcut icon" href="aa.gif" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    
+     <title>AL_AHLY</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+body{
+  text-align: center;
+}
+.loader-container{
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader{
+  width: 50px;
+  height: 50px;
+  border: 5px solid;
+  color: #3498db;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader{
+  25%{
+      color: #2ecc71;
+  }
+  50%{
+      color: #f1c40f;
+  }
+  75%{
+      color: #e74c3c;
+  }
+  to{
+      transform: rotate(360deg);
+  }
+}
+.fa {
+  padding: 20px;
+  font-size: 10px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 30%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  color: white;
+}
+
+.fa-twitter {
+
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  color: white;
+}
+.header {
+  padding: 10px;
+  text-align: top left;
+  background: whitesmoke;
+  color: red;
+}
+.mySlides {display:none;}
+/* The grid: Three equal columns that floats next to each other  Video */
+.column {
+  float: left;
+  width: 20%;
+  padding: 30px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+body {margin:0;font-family: Verdana}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: red;
+  color: white;
+
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color:white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: Verdana;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px  red;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color:red;
+  color: black;
+  font-family: Verdana;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+</style>
+ </head>
+    <body style="position: relative;min-height:100%; top: 0px; " >
+      <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <script>
+        $(window).on("load",function(){
+            $(".loader-container").fadeOut(1000);
+        });
+    </script>
+        <div class="header">
+            <h1> <img src="aa.gif" style="margin-right: 1150px; margin-left: 0px;"> </h1>
+          </div>
+
+      <!-- The navigation menu -->
+<div style="padding-block: 10px;font-family:  Verdana;">
+  <div class="topnav" id="myTopnav" style="padding: 10px; ">
+      <a href="#home" class="active" style="font-size: 20px ; padding-top: 28px; font-family:  Verdana;">Home</a>
+     <div class="dropdown">
+      <button class="dropbtn">NEWS
+        <i class="fa fa-caret-down"></i>
+      </button>
+    </div> 
+    <div class="dropdown">
+      <button class="dropbtn">FOOTBALL
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="file:///D:/My%20Page/list%20of%20players.html">First Team</a>
+      </div>
+    </div> 
+    <div class="dropdown">
+      <button class="dropbtn">OTHERS 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="file:///D:/My%20Page/history.html">History</a>
+      </div>
+    </div>
+     <div class="dropdown">
+      <button class="dropbtn">CONTACT
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="file:///D:/My%20Page/sign%20up.html">Sign UP</a>
+        <a href="file:///D:/My%20Page/login.html">Login</a>
+       
+      </div>
+    </div> 
+   
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+</div>
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+  
+    
+       <!-- slideshow   -->    
+<div class="w3-content w3-display-container">
+
+    <div class="w3-display-container mySlides">
+      <img src="113.jpg" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        الاهلي يحتفل بمرور 113 سنه ع انشائه
+      </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+      <img src="sayad.jpg" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        كابتن| سيد عبد الحفيظ يرفض مشاركه احمد الشيخ ف دوره البلاستيشن العالميه
+      </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+      <img src="team.jpg" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        الفريق لاول يخوض مرانه ع ملعب التتش اليوم
+      </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+      <img src="cha.jpg" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        كابتن|وائل جمعه ضيفا ع قناه الاهلي اليوم
+      </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+      <img src="mm.jpg" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        تعرف ع اهم قرارت مجلس الاداره ف اجتماعه اليوم
+      </div>
+    </div>
+    
+    <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+    
+    </div>
+    
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+    <br>
+   <br>
+    
+<!--news-->
+<div class="w3-container">
+ <h2><div class="w3-panel w3-round-xxlarge w3-black" >اخبار الاهلي  </div> </h2>
+  </div>
+ <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="الأهلي-شعار-600x375.jpg" alt="Norway" style="width:80% ;height: 350px;" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h3><b>
+            الاهلي يحصد استفتاء الماركا 
+        </b></h3>
+        <div class="w3-container">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black"> المزيد </button>
+            <div id="id01" class="w3-modal">
+              <div class="w3-modal-content">
+                <header class="w3-container w3-teal"> 
+                  <span onclick="document.getElementById('id01').style.display='none'" 
+                  class="w3-button w3-display-topright w3-black">&times;</span>
+                </header>
+                <div class="w3-container">
+                  <p>فاز النادي الأهلي باستفتاء صحيفة ماركا الإسبانية واسعة الانتشار، الذي طرحته لاختيار أفضل شعار لأندية العالم، بعدما انحصر السباق بين خمسين ناديًا على مستوى العالم.
+                    وحصد شعار النادي الأهلي 
+                    ما يزيد على 3 ملايين صوت من زوار موقع الصحيفة الإسبانية
+                     وبفارق كبير عن أقرب ملاحقيه، ليتفوق الأهلي نادي القرن في قارة إفريقيا والأكثر تتويجًا بالبطولات على أندية عالمية، مثل ريال مدريد وبرشلونة وأتليتكو مدريد من إسبانيا، وليفربول ومانشستر يونايتد من إنجلترا، وإنتر ميلان
+                      وأيه سي ميلان من إيطاليا، بالإضافة لأندية أمريكا الجنوبية، 
+                     وفي مقدمتها بوكاجونيورز الأرجنتيني، وفلامنجو البرازيلي.</p>
+                </div>
+               
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="الخطيب.jpeg" alt="Norway" style="width:80%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h3><b> الأهلي يحدد موقفه من استئناف النشاط الرياضي </b></h3>
+        <div class="w3-container">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black"> المزيد</button>
+          
+            <div id="id01" class="w3-modal">
+              <div class="w3-modal-content">
+                <header class="w3-container w3-teal"> 
+                  <span onclick="document.getElementById('id01').style.display='none'" 
+                  class="w3-button w3-display-topright w3-black">&times;</span>
+                </header>
+                <div class="w3-container">
+                  <p>أعلن النادي الأهلي عن موقفه من استئناف النشاط الرياضي إذ يري ضرورة العمل علي استكمال الموسم الكروي ٢٠١٩/٢٠٢٠ في التوقيت الذي تحدده مؤسسات الدولة وفقاً لرؤيتها بما يضمن عودة آمنة تسهم في تحقيق كل الأهداف الصحية والاقتصادية والرياضية ..جاء ذلك بعدما قام الكابتن محمود الخطيب رئيس النادي بإجراء مشاورات مكثفة مع أعضاء مجلس الادارة اليوم..ولخص النادي رؤيته في النقاط التالية :-
+                    – اتخاذ أي قرار بخصوص الموسم الكروي غير استكمال المسابقات ولو في توقيت متأخر يترتب عليه حرمان الأندية من بقية عوائدها التسويقية وفقًا لتعاقداتها مع الشركات الراعية والحاصلة على حقوق البث وخلافه.
+                    
+                    – سدد النادي الأهلي والمفترض سائر الأندية ما يوازي 85% من رواتب اللاعبين والأجهزة الفنية والإدارية والطبية عن الموسم الحالي .. في المقابل لم تحصل الأندية على نفس النسبة من عوائدها المالية ( رعاية – بث – …. إلخ) وإذا تم إلغاء النشاط لن تحصل على أكثر من 50 %</p>
+                </div> </div> </div> </div> </div> </div>
+    <div class="w3-third w3-container">
+      <img src="سله.gif" alt="Norway" style="width:80%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h3><b>تدريبات بدنية مكثفة لرجال السلة</b></h3>
+        <div class="w3-container">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">المزيد</button>
+          
+            <div id="id01" class="w3-modal">
+              <div class="w3-modal-content">
+                <header class="w3-container w3-teal" style="color: red;"> 
+                  <span onclick="document.getElementById('id01').style.display='none'" 
+                  class="w3-button w3-display-topright w3-black ">&times;</span>
+                 
+                </header>
+                <div class="w3-container"><p>
+                    الجهاز الفني للفريق الأول لكرة السلة “رجال” بالنادي قام بإرسال جدول تدريبات بدنية مكثفة للاعبي الفريق لتنفيذه من المنزل في ظل تعليق التدريبات وتوقف جميع المسابقات بسبب وباء كورونا.
+وحرص الجهاز الفني على زيادة جرعة التدريبات التي يؤديها اللاعبون وفقا للأدوات المتاحة، وذلك من أجل الحفاظ على الحالة البدنية ومستوى لياقة الجميع.
+ويحرص الجهاز الفني على متابعة اللاعبين عبر وسائل التواصل للوقوف على قياسات الوزن والبرنامج الغذائي من أجل الحفاظ على لياقتهم البدنية تحسبا لاستئناف النشاط الرياضي في أي وقت.
+
+                </p>
+              </div> </div> </div> </div> </div> </div> </div>
+
+ <!--vidoes-->
+<!-- Explore Nature -->
+<div class="w3-container">
+    <h2><div class="w3-panel w3-round-xxlarge w3-black" >فيديو الاهلي </div></h2>
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+    <!--<img src="sayad.jpg" alt="Norway" style="width:100%">-->
+    <iframe  style="padding: 50px; width: 600px; height: 400px;" src="https://www.youtube.com/embed/CHmG0s75MBs" frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <h3>مران الاهلي ف ملعب التتش اليوم </h3>
+      </div></div>
+    <div class="w3-half w3-margin-bottom">
+     <iframe  style="padding: 50px; width: 600px; height: 400px;" src="https://www.youtube.com/embed/AtOcrtLL4xU" frameborder="0" 
+     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <h2>فيلم#113_سنه_اهلي</h2>
+      </div> </div> </div>
+      <br>
+<!--Accordion-->
+<div class="w3-container">
+    <h2> <div class="w3-panel w3-round-xxlarge w3-black" >الاهلي ف بطولاته</div> </h2>
+  </div>
+      <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align w3-black" style="color: red;font-size: 20px;" >الاهلي ف الدوري المصري </button>
+      <div id="Demo1" class="w3-hide">
+        <div class="w3-container">
+                <h2> بطل الدوري </h2>
+                <img src="list.jpeg" style="width:30%;" class="w3-animate-zoom">
+        </div>
+      </div>
+      <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align w3-black"style="color: red;font-size: 20px;">الاهلي ف دوري ابطال افريقيا</button>
+      <div id="Demo2" class="w3-hide">
+        <div class="w3-container">
+            <h2>دور نصف النهائي</h2>
+            <img src="Screenshot_20200507_043225.jpg" style="width:30%;" class="w3-animate-zoom">
+      </div>
+      </div>
+      <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align w3-black"style="color: red;font-size: 20px;">الاهلي ف كاس مصر </button>
+      <div id="Demo3" class="w3-hide ">
+        <div class="w3-container">
+          <h2> دور ال 16</h2>
+          <img src="Screenshot_20200507_043249.jpg" style="width:30%;" class="w3-animate-zoom">
+        </div>
+      </div>
+      <script>
+          function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+      </script>
+<br>
+                <br>
+<!-- Footer -->
+<footer class="w3-center  w3-black  w3-padding-64" >
+    <h1 style="margin-left: 50px; color:white; "> AL_AHLY</h1>
+    <div class="w3-xlarge w3-section" style="margin-left: 50px; padding: 2px;">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    
+    </div>
+</footer>
+</body>
+
+        </html>
